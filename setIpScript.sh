@@ -1,6 +1,6 @@
 #!/bin/bash
 FILE=/home/root/usr/DefaultRepo/ipDatabase.txt
-SUBNET=192.156.100
+SUBNET=192.156.10
 MASK=255.255.255.0
 
 for iter in $(seq 0 255);
