@@ -10,13 +10,11 @@ do
 	then
 		echo "$IP busy"
 	else
-		#echo "" >> /etc/network/interfaces
+		sed -i '/'$1'$/,/\n\n/d' /etc/network/interfaces
+		echo "" >> /etc/network/interfaces
 		echo "auto $1" >> /etc/network/interfaces
-		#echo "" >> /etc/network/interfaces
 		echo "iface $1 inet static" >> /etc/network/interfaces
-		#echo "" >> /etc/network/interfaces
 		echo "address $IP" >> /etc/network/interfaces
-		#echo "" >> /etc/network/interfaces
 		echo "netmask $MASK" >> /etc/network/interfaces
 		echo $IP >> $FILE
 		ifdown $1
