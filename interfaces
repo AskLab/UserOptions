@@ -1,10 +1,6 @@
 
-auto 
-iface  inet static
-address 192.156.50.0
-netmask 255.255.255.0
 
 auto eth1
 iface eth1 inet static
-address 192.156.60.1
+address 192.156.60.2
 netmask 255.255.255.0
