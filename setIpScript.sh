@@ -1,9 +1,9 @@
 #!/bin/bash
 FILE=/home/root/usr/DefaultRepo/ipDatabase.txt
-SUBNET=192.156.50
+SUBNET=192.156.60
 MASK=255.255.255.0
 
-for iter in $(seq 0 255);
+for iter in $(seq 1 254);
 do
 	IP="$SUBNET.$iter"
 	if grep -Fxq "$IP" $FILE
